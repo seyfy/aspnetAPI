@@ -14,6 +14,7 @@ public class HomeController : Controller
 
         using (var httpClient = new HttpClient())
         {
+        // server name is diffrent for everyone when you use this api please use your local adress this is belong to me
             using (var response = await httpClient.GetAsync("http://localhost:5154/api/products"))
             {
                 string apiResponse = await response.Content.ReadAsStringAsync();
